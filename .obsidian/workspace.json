@@ -15,9 +15,9 @@
               "state": {
                 "file": "Agency/All Flows.canvas",
                 "viewState": {
-                  "x": 27.40325189099019,
-                  "y": -992.513559767981,
-                  "zoom": 0.3855722892878812
+                  "x": 831.1860465116279,
+                  "y": -343.93023255813966,
+                  "zoom": -2.281094377378785
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5110321044922
+    "width": 411.5
   },
   "right": {
     "id": "60052d8c228c3569",
@@ -214,10 +214,19 @@
   },
   "active": "02dbab51363ebd84",
   "lastOpenFiles": [
-    "Agency/Dashboard/Agency Overview.md",
     "Agency/Today's TODO.md",
-    "logo.jpeg",
     "Agency/All Flows.canvas",
+    "Agency/SOP/Editor Guidelines.md",
+    "Agency/SOP/Outreacher Scripts.md",
+    "Agency/SOP/Client Onboarding.md",
+    "Agency/Legal/Forms.md",
+    "Agency/Legal/Coreline_Agency_NDA.pdf",
+    "Agency/Legal/CoreLine Agency.pdf",
+    "Agency/Legal/Agency_Rules_and_Sample_Policy.pdf",
+    "Agency/Legal/Coreline_Outreach_Revenue_Share_Policy.pdf",
+    "Agency/Legal/Coreline_Interview_Questions.pdf",
+    "Agency/Dashboard/Agency Overview.md",
+    "logo.jpeg",
     "logo (1).jpeg",
     "Agency/Templates/project.md",
     "Agency/Templates/team-member.md",
@@ -229,18 +238,9 @@
     "Agency/Templates/client.md",
     "Agency/Templates/invoice.md",
     "Agency/Templates/payout.md",
-    "Agency/Legal/Forms.md",
-    "Agency/SOP/Outreacher Scripts.md",
-    "Agency/SOP/Client Onboarding.md",
     "Agency/SOP/Project Delivery Standards.md",
-    "Agency/Legal/Coreline_Agency_NDA.pdf",
     "CoreLine-Agency",
-    "Agency/SOP/Editor Guidelines.md",
-    "Agency/Legal/Coreline_Outreach_Revenue_Share_Policy.pdf",
-    "Agency/Legal/CoreLine Agency.pdf",
-    "Agency/Legal/Agency_Rules_and_Sample_Policy.pdf",
     "Agency/Legal/Coreline_Interview_Questions 1.pdf",
-    "Agency/Legal/Coreline_Interview_Questions.pdf",
     "Agency/Legal/Staff or Partner Registration.md",
     "Staff or Partner Registration.md",
     "Agency_Rules_and_Sample_Policy 1.pdf",
