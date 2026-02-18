@@ -1,9 +1,9 @@
 ---
 type: project
-client: 
-editor: 
-deadline: 
-status: 
-revisions: 
-priority: 
+client:
+editor:
+deadline:
+status:
+revisions:
+priority:
 ---
