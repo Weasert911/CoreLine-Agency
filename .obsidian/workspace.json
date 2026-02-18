@@ -11,12 +11,17 @@
             "id": "02dbab51363ebd84",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "canvas",
               "state": {
-                "file": "logo.jpeg"
+                "file": "Agency/All Flows.canvas",
+                "viewState": {
+                  "x": 27.40325189099019,
+                  "y": -992.513559767981,
+                  "zoom": 0.3855722892878812
+                }
               },
-              "icon": "lucide-image",
-              "title": "logo"
+              "icon": "lucide-layout-dashboard",
+              "title": "All Flows"
             }
           }
         ]
@@ -209,9 +214,10 @@
   },
   "active": "02dbab51363ebd84",
   "lastOpenFiles": [
+    "Agency/Dashboard/Agency Overview.md",
     "Agency/Today's TODO.md",
-    "Agency/All Flows.canvas",
     "logo.jpeg",
+    "Agency/All Flows.canvas",
     "logo (1).jpeg",
     "Agency/Templates/project.md",
     "Agency/Templates/team-member.md",
@@ -227,7 +233,6 @@
     "Agency/SOP/Outreacher Scripts.md",
     "Agency/SOP/Client Onboarding.md",
     "Agency/SOP/Project Delivery Standards.md",
-    "Agency/Dashboard/Agency Overview.md",
     "Agency/Legal/Coreline_Agency_NDA.pdf",
     "CoreLine-Agency",
     "Agency/SOP/Editor Guidelines.md",
