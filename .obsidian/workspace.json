@@ -11,17 +11,14 @@
             "id": "2fa751383cfc139e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Agency/Each Project Brief Automation.canvas",
-                "viewState": {
-                  "x": -317.86679215672467,
-                  "y": -895.450822710739,
-                  "zoom": -0.32966374366696755
-                }
+                "file": "Agency/Today's TODO.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Each Project Brief Automation"
+              "icon": "lucide-file",
+              "title": "Today's TODO"
             }
           }
         ]
@@ -169,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Agency/Each Project Brief Automation.canvas",
+                "file": "Agency/Payment Structure.canvas",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Each Project Brief Automation"
+              "title": "Outline of Payment Structure"
             }
           },
           {
@@ -226,26 +223,30 @@
       "obsidian-kanban:Create new board": false,
       "notebook-navigator:Notebook Navigator": false,
       "templater-obsidian:Templater": false,
-      "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Smart Lookup: Open lookup view": false,
-      "smart-connections:Smart Connections: Open random connection": false,
       "webpage-html-export:Export as HTML": false,
       "cannoli:Start/stop cannoli": false
     }
   },
   "active": "2fa751383cfc139e",
   "lastOpenFiles": [
-    "Agency/All Flows.canvas",
-    "{{Editor Name}}.md",
     "Agency/Each Project Brief Automation.canvas",
-    "Agency/Templates/project.md",
-    "Agency/Templates/payout.md",
-    "Agency/Templates/invoice.md",
-    "Agency/Templates/client.md",
-    "Agency/Templates/deal.md",
-    "Agency/Templates/contract.md",
-    "Agency/Templates/{Project Name}.md",
+    "Agency/Payment Structure.canvas",
+    "Agency/Today's TODO.md",
+    "Agency/Untitled.md",
+    "Agency/Untitled.canvas",
+    "logo.jpeg",
+    "Untitled.md",
     "CIRA (Central Intelligence & Resource Assistant).md",
+    "Agency/All Flows.canvas",
+    "Agency/Templates/payout.md",
+    "Agency/Templates/contract.md",
+    "Agency/Templates/client.md",
+    "Agency/Templates/{Project Name}.md",
+    "{{Editor Name}}.md",
+    "Agency/SOP/Project Delivery Standards.md",
+    "Agency/Templates/project.md",
+    "Agency/Templates/invoice.md",
+    "Agency/Templates/deal.md",
     "Agency/Legal/Coreline_Agency_NDA.pdf",
     "Agency/Legal/Forms.md",
     "Agency/Legal/Team Manager T&C.pdf",
@@ -253,9 +254,7 @@
     "Agency/Templates/team-member.md",
     "Agency/SOP/Outreacher Scripts.md",
     "Gemini Chats/New Chat.gemini",
-    "Agency/Today's TODO.md",
     "Gemini Chats",
-    "logo.jpeg",
     "Dashboard/dashboard.md",
     "Dashboard 1/dashboard.md",
     "Dashboard 1/dashboard.js",
@@ -270,9 +269,6 @@
     "Agency/Dashboard/Agency Overview.md",
     "Agency/Dashboard/Dashboard.md",
     "copilot/copilot-conversations/I_want_you_to_act_as_an_Expert_Obsidian_System@20260219_112743.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "logo (1).jpeg",
     "Untitled.canvas"
   ]

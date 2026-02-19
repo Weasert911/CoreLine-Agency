@@ -11,7 +11,7 @@
   "azureOpenAIApiVersion": "",
   "azureBaseURL": "",
   "geminiModel": "gemini-2.5-flash",
-  "geminiAPIKey": "AIzaSyBvPBD7hJby2qTc90t2JAuHpzZPoB20WiY",
+  "geminiAPIKey": "AIzaSyCCIcDBjkhxjNnuBgbiYCjhsG8RuCjU95c",
   "geminiTemperature": 1,
   "anthropicModel": "claude-3-5-sonnet-20240620",
   "anthropicAPIKey": "",
