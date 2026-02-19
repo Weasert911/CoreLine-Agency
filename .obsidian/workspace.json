@@ -4,24 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2eed5142580e3f96",
+        "id": "b59d3a63552b2959",
         "type": "tabs",
         "children": [
           {
-            "id": "02dbab51363ebd84",
+            "id": "659e4dacd82b4761",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Agency/All Flows.canvas",
-                "viewState": {
-                  "x": 350,
-                  "y": 390,
-                  "zoom": -2.281094377378785
-                }
+                "file": "Agency/Dashboard/Agency Overview.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "All Flows"
+              "icon": "lucide-file",
+              "title": "Agency Overview"
             }
           }
         ]
@@ -36,6 +33,7 @@
       {
         "id": "d919067763704dcd",
         "type": "tabs",
+        "dimension": 72.46913580246914,
         "children": [
           {
             "id": "f304b06133a63648",
@@ -89,10 +87,27 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "9564284843e1bd2a",
+        "type": "tabs",
+        "dimension": 27.530864197530867,
+        "children": [
+          {
+            "id": "02dbab51363ebd84",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 411.5
+    "width": 290.5
   },
   "right": {
     "id": "60052d8c228c3569",
@@ -101,6 +116,7 @@
       {
         "id": "69f01a66f9b7610a",
         "type": "tabs",
+        "dimension": 54.10798122065727,
         "children": [
           {
             "id": "2e688091a94149dc",
@@ -108,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Agency/SOP/Editor Guidelines.md",
+                "file": "Agency/Dashboard/Agency Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Editor Guidelines"
+              "title": "Backlinks for Agency Overview"
             }
           },
           {
@@ -127,12 +143,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Agency/SOP/Editor Guidelines.md",
+                "file": "Agency/Dashboard/Agency Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Editor Guidelines"
+              "title": "Outgoing links from Agency Overview"
             }
           },
           {
@@ -170,32 +186,38 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/team-member.md",
-                "followCursor": false,
+                "file": "Agency/Dashboard/Agency Overview.md",
+                "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of team-member"
+              "title": "Outline of Agency Overview"
             }
-          },
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "2096d9a16e8b1636",
+        "type": "tabs",
+        "dimension": 45.89201877934273,
+        "children": [
           {
             "id": "c9177318e5270201",
             "type": "leaf",
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,49 +231,51 @@
       "system3-relay:Relay": false,
       "obsidian-kanban:Create new board": false,
       "notebook-navigator:Notebook Navigator": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "02dbab51363ebd84",
+  "active": "659e4dacd82b4761",
   "lastOpenFiles": [
+    "Agency/Dashboard/Dashboard.md",
+    "Agency/Dashboard/Agency Overview.md",
+    "copilot/copilot-conversations/I_want_you_to_act_as_an_Expert_Obsidian_System@20260219_112743.md",
+    "copilot/copilot-conversations",
+    "Agency/Templates/{Project Name}.md",
+    "Agency/Templates/project.md",
+    "Agency/All Flows.canvas",
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "Agency/SOP/Editor Guidelines.md",
+    "logo.jpeg",
+    "Untitled Kanban.md",
     "Agency/Untitled.base",
     "Agency/Templates/payout.md",
-    "Agency/All Flows.canvas",
     "Agency/Today's TODO.md",
-    "Agency/SOP/Editor Guidelines.md",
     "Agency/SOP/Outreacher Scripts.md",
     "Agency/SOP/Client Onboarding.md",
-    "Agency/Legal/Forms.md",
     "Agency/Legal/Coreline_Agency_NDA.pdf",
     "Agency/Legal/CoreLine Agency.pdf",
     "Agency/Legal/Agency_Rules_and_Sample_Policy.pdf",
     "Agency/Legal/Coreline_Outreach_Revenue_Share_Policy.pdf",
     "Agency/Legal/Coreline_Interview_Questions.pdf",
-    "Agency/Dashboard/Agency Overview.md",
-    "logo.jpeg",
     "logo (1).jpeg",
-    "Agency/Templates/project.md",
-    "Agency/Templates/team-member.md",
-    "Agency/Templates/{Project Name}.md",
-    "Agency/Templates/meeting.md",
-    "Agency/Templates/lead.md",
-    "Agency/Templates/deal.md",
-    "Agency/Templates/contract.md",
-    "Agency/Templates/client.md",
-    "Agency/Templates/invoice.md",
-    "Agency/SOP/Project Delivery Standards.md",
     "CoreLine-Agency",
-    "Agency/Legal/Coreline_Interview_Questions 1.pdf",
-    "Agency/Legal/Staff or Partner Registration.md",
-    "Staff or Partner Registration.md",
-    "Agency_Rules_and_Sample_Policy 1.pdf",
-    "Agency",
-    "Plugin Configuration.md",
-    "Team/Aman Editor.md",
-    "Team/Ravi Outreach.md",
-    "Dashboard/Projects.md",
-    "Templater Configuration.md",
-    "CRM Dashboard.md",
     "Untitled.canvas"
   ]
 }

@@ -3,7 +3,6 @@
   "obsidian-kanban",
   "obsidian-icon-folder",
   "calendar",
-  "obsidian-webhooks",
   "notebook-navigator",
   "templater-obsidian",
   "obsidian-charts",
@@ -11,5 +10,8 @@
   "obsidian-tasks-plugin",
   "quickadd",
   "buttons",
-  "obsidian-advanced-uri"
+  "obsidian-advanced-uri",
+  "obsidian-minimal-settings",
+  "ninja-cursor",
+  "copilot"
 ]
