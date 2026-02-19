@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b59d3a63552b2959",
+        "id": "7019be90a0d18314",
         "type": "tabs",
         "children": [
           {
-            "id": "659e4dacd82b4761",
+            "id": "e17b44a416fa228c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agency/Dashboard/Agency Overview.md",
+                "file": "Agency/Today's TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agency Overview"
+              "title": "Today's TODO"
             }
           }
         ]
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Agency/Dashboard/Agency Overview.md",
+                "file": "Agency/Today's TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Agency Overview"
+              "title": "Backlinks for Today's TODO"
             }
           },
           {
@@ -143,12 +143,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Agency/Dashboard/Agency Overview.md",
+                "file": "Agency/Today's TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Agency Overview"
+              "title": "Outgoing links from Today's TODO"
             }
           },
           {
@@ -186,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Agency/Dashboard/Agency Overview.md",
+                "file": "Agency/Today's TODO.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Agency Overview"
+              "title": "Outline of Today's TODO"
             }
           }
         ],
@@ -235,15 +235,31 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "659e4dacd82b4761",
+  "active": "e17b44a416fa228c",
   "lastOpenFiles": [
-    "Agency/Dashboard/Dashboard.md",
+    "Agency/All Flows.canvas",
+    "logo.jpeg",
+    "Dashboard/dashboard.md",
+    "Dashboard 1/dashboard.md",
+    "Dashboard 1/dashboard.js",
+    "Dashboard 1/dashboard.html",
+    "Dashboard 1",
+    "Agency/Deals/Ghost Editor.md",
+    "Agency/Templates/deal.md",
+    "Dashboard/dashboard.js",
+    "Dashboard/dashboard.html",
+    "Dashboard",
+    "Agency/Dashboard/DashboardTemplate.md",
+    "Agency/Dashboard/Index.md",
+    "Agency/Dashboard/ComprehensiveIndex.md",
     "Agency/Dashboard/Agency Overview.md",
+    "generate_comprehensive_dashboard.py",
+    "generate_dashboard.py",
+    "Agency/Dashboard/Dashboard.md",
     "copilot/copilot-conversations/I_want_you_to_act_as_an_Expert_Obsidian_System@20260219_112743.md",
     "copilot/copilot-conversations",
     "Agency/Templates/{Project Name}.md",
     "Agency/Templates/project.md",
-    "Agency/All Flows.canvas",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
@@ -257,25 +273,8 @@
     "copilot/copilot-custom-prompts/Explain like I am 5.md",
     "copilot/copilot-custom-prompts/Simplify.md",
     "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
-    "copilot",
-    "Agency/SOP/Editor Guidelines.md",
-    "logo.jpeg",
-    "Untitled Kanban.md",
-    "Agency/Untitled.base",
-    "Agency/Templates/payout.md",
-    "Agency/Today's TODO.md",
-    "Agency/SOP/Outreacher Scripts.md",
-    "Agency/SOP/Client Onboarding.md",
-    "Agency/Legal/Coreline_Agency_NDA.pdf",
-    "Agency/Legal/CoreLine Agency.pdf",
-    "Agency/Legal/Agency_Rules_and_Sample_Policy.pdf",
-    "Agency/Legal/Coreline_Outreach_Revenue_Share_Policy.pdf",
-    "Agency/Legal/Coreline_Interview_Questions.pdf",
     "logo (1).jpeg",
-    "CoreLine-Agency",
     "Untitled.canvas"
   ]
 }
