@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "854ddecfedcc9275",
+        "id": "a15c232a64f75ad4",
         "type": "tabs",
         "children": [
           {
-            "id": "6b90488f3499a1b6",
+            "id": "2fa751383cfc139e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Agency/Templates/project.md",
-                "mode": "source",
-                "source": false
+                "file": "Agency/Each Project Brief Automation.canvas",
+                "viewState": {
+                  "x": -317.86679215672467,
+                  "y": -895.450822710739,
+                  "zoom": -0.32966374366696755
+                }
               },
-              "icon": "lucide-file",
-              "title": "project"
+              "icon": "lucide-layout-dashboard",
+              "title": "Each Project Brief Automation"
             }
           }
         ]
@@ -33,7 +36,6 @@
       {
         "id": "d919067763704dcd",
         "type": "tabs",
-        "dimension": 72.46913580246914,
         "children": [
           {
             "id": "f304b06133a63648",
@@ -87,27 +89,10 @@
           }
         ],
         "currentTab": 3
-      },
-      {
-        "id": "9564284843e1bd2a",
-        "type": "tabs",
-        "dimension": 27.530864197530867,
-        "children": [
-          {
-            "id": "02dbab51363ebd84",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 373.5
   },
   "right": {
     "id": "60052d8c228c3569",
@@ -184,17 +169,27 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Agency/Templates/project.md",
+                "file": "Agency/Each Project Brief Automation.canvas",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of project"
+              "title": "Outline of Each Project Brief Automation"
+            }
+          },
+          {
+            "id": "02dbab51363ebd84",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "2096d9a16e8b1636",
@@ -215,7 +210,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,22 +229,28 @@
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Lookup: Open lookup view": false,
       "smart-connections:Smart Connections: Open random connection": false,
-      "webpage-html-export:Export as HTML": false
+      "webpage-html-export:Export as HTML": false,
+      "cannoli:Start/stop cannoli": false
     }
   },
-  "active": "6b90488f3499a1b6",
+  "active": "2fa751383cfc139e",
   "lastOpenFiles": [
-    "Agency/Templates/client.md",
+    "Agency/All Flows.canvas",
+    "{{Editor Name}}.md",
+    "Agency/Each Project Brief Automation.canvas",
     "Agency/Templates/project.md",
+    "Agency/Templates/payout.md",
+    "Agency/Templates/invoice.md",
+    "Agency/Templates/client.md",
+    "Agency/Templates/deal.md",
+    "Agency/Templates/contract.md",
     "Agency/Templates/{Project Name}.md",
+    "CIRA (Central Intelligence & Resource Assistant).md",
     "Agency/Legal/Coreline_Agency_NDA.pdf",
     "Agency/Legal/Forms.md",
-    "Agency/All Flows.canvas",
     "Agency/Legal/Team Manager T&C.pdf",
     "Agency/Legal/msoB329.tmp",
     "Agency/Templates/team-member.md",
-    "Agency/Templates/contract.md",
-    "Agency/Templates/deal.md",
     "Agency/SOP/Outreacher Scripts.md",
     "Gemini Chats/New Chat.gemini",
     "Agency/Today's TODO.md",
@@ -271,11 +273,6 @@
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
     "logo (1).jpeg",
     "Untitled.canvas"
   ]

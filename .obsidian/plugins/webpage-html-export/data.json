@@ -213,7 +213,7 @@
     "faviconPath": "",
     "siteName": "CoreLine-Agency",
     "iconEmojiStyle": "Native",
-    "exportRoot": "",
+    "exportRoot": "Agency/Templates",
     "includePluginCss": [],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true
