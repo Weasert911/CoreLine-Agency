@@ -15,8 +15,8 @@
               "state": {
                 "file": "Agency/All Flows.canvas",
                 "viewState": {
-                  "x": 831.1860465116279,
-                  "y": -343.93023255813966,
+                  "x": 350,
+                  "y": 390,
                   "zoom": -2.281094377378785
                 }
               },
@@ -214,8 +214,10 @@
   },
   "active": "02dbab51363ebd84",
   "lastOpenFiles": [
-    "Agency/Today's TODO.md",
+    "Agency/Untitled.base",
+    "Agency/Templates/payout.md",
     "Agency/All Flows.canvas",
+    "Agency/Today's TODO.md",
     "Agency/SOP/Editor Guidelines.md",
     "Agency/SOP/Outreacher Scripts.md",
     "Agency/SOP/Client Onboarding.md",
@@ -237,7 +239,6 @@
     "Agency/Templates/contract.md",
     "Agency/Templates/client.md",
     "Agency/Templates/invoice.md",
-    "Agency/Templates/payout.md",
     "Agency/SOP/Project Delivery Standards.md",
     "CoreLine-Agency",
     "Agency/Legal/Coreline_Interview_Questions 1.pdf",
@@ -246,7 +247,6 @@
     "Agency_Rules_and_Sample_Policy 1.pdf",
     "Agency",
     "Plugin Configuration.md",
-    "Untitled.base",
     "Team/Aman Editor.md",
     "Team/Ravi Outreach.md",
     "Dashboard/Projects.md",
