@@ -11,14 +11,17 @@
             "id": "2fa751383cfc139e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Agency/Today's TODO.md",
-                "mode": "source",
-                "source": false
+                "file": "Agency/All Flows.canvas",
+                "viewState": {
+                  "x": 135.26479804985058,
+                  "y": 469.94268979503556,
+                  "zoom": -0.33812532241516385
+                }
               },
-              "icon": "lucide-file",
-              "title": "Today's TODO"
+              "icon": "lucide-layout-dashboard",
+              "title": "All Flows"
             }
           }
         ]
@@ -231,13 +234,13 @@
   "lastOpenFiles": [
     "Agency/Each Project Brief Automation.canvas",
     "Agency/Payment Structure.canvas",
+    "Agency/All Flows.canvas",
     "Agency/Today's TODO.md",
     "Agency/Untitled.md",
     "Agency/Untitled.canvas",
     "logo.jpeg",
     "Untitled.md",
     "CIRA (Central Intelligence & Resource Assistant).md",
-    "Agency/All Flows.canvas",
     "Agency/Templates/payout.md",
     "Agency/Templates/contract.md",
     "Agency/Templates/client.md",
