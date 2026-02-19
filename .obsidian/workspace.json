@@ -4,24 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "7019be90a0d18314",
+        "id": "854ddecfedcc9275",
         "type": "tabs",
         "children": [
           {
-            "id": "e17b44a416fa228c",
+            "id": "6b90488f3499a1b6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Agency/Today's TODO.md",
-                "mode": "source",
-                "source": false
+                "file": "Agency/All Flows.canvas",
+                "viewState": {
+                  "x": 331.53562808030847,
+                  "y": 933.9347078349948,
+                  "zoom": -1.671458655748497
+                }
               },
+              "icon": "lucide-layout-dashboard",
+              "title": "All Flows"
+            }
+          },
+          {
+            "id": "8558c60802e1a176",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Today's TODO"
+              "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +138,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Agency/Today's TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Today's TODO"
+              "title": "Backlinks"
             }
           },
           {
@@ -143,12 +156,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Agency/Today's TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Today's TODO"
+              "title": "Outgoing links"
             }
           },
           {
@@ -186,13 +198,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Agency/Today's TODO.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Today's TODO"
+              "title": "Outline"
             }
           }
         ],
@@ -217,7 +228,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,12 +243,27 @@
       "obsidian-kanban:Create new board": false,
       "notebook-navigator:Notebook Navigator": false,
       "templater-obsidian:Templater": false,
-      "copilot:Open Copilot Chat": false
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "e17b44a416fa228c",
+  "active": "8558c60802e1a176",
   "lastOpenFiles": [
     "Agency/All Flows.canvas",
+    "Agency/Legal/Forms.md",
+    "Agency/Legal/Team Manager T&C.pdf",
+    "Agency/Legal/msoB329.tmp",
+    "Agency/Templates/project.md",
+    "Agency/Templates/{Project Name}.md",
+    "Agency/Templates/team-member.md",
+    "Agency/Templates/contract.md",
+    "Agency/Templates/deal.md",
+    "Agency/SOP/Outreacher Scripts.md",
+    "Gemini Chats/New Chat.gemini",
+    "Agency/Today's TODO.md",
+    "Gemini Chats",
     "logo.jpeg",
     "Dashboard/dashboard.md",
     "Dashboard 1/dashboard.md",
@@ -245,7 +271,6 @@
     "Dashboard 1/dashboard.html",
     "Dashboard 1",
     "Agency/Deals/Ghost Editor.md",
-    "Agency/Templates/deal.md",
     "Dashboard/dashboard.js",
     "Dashboard/dashboard.html",
     "Dashboard",
@@ -253,13 +278,8 @@
     "Agency/Dashboard/Index.md",
     "Agency/Dashboard/ComprehensiveIndex.md",
     "Agency/Dashboard/Agency Overview.md",
-    "generate_comprehensive_dashboard.py",
-    "generate_dashboard.py",
     "Agency/Dashboard/Dashboard.md",
     "copilot/copilot-conversations/I_want_you_to_act_as_an_Expert_Obsidian_System@20260219_112743.md",
-    "copilot/copilot-conversations",
-    "Agency/Templates/{Project Name}.md",
-    "Agency/Templates/project.md",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
@@ -268,12 +288,6 @@
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
     "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts",
     "logo (1).jpeg",
     "Untitled.canvas"
   ]

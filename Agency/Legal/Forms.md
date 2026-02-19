@@ -2,6 +2,7 @@
 #### Staff:
 [Link](https://docs.google.com/forms/d/e/1FAIpQLScc7FPuoNvafKih0tkl0QRp2F0k70i-39XOLtcBLa1oUgP10g/viewform)
 [[Coreline_Outreach_Revenue_Share_Policy.pdf]]
+[[Team Manager T&C.pdf]]
 [[Coreline_Agency_NDA.pdf]]
 #### Editor Application:
 [Link](https://docs.google.com/forms/d/e/1FAIpQLSe3BWNefG6LuJPc24QKqynyxuGyszMmqRIhzp7I0FD3TBAyBg/viewform)
