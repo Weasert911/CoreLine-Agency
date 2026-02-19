@@ -11,31 +11,17 @@
             "id": "6b90488f3499a1b6",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Agency/All Flows.canvas",
-                "viewState": {
-                  "x": 331.53562808030847,
-                  "y": 933.9347078349948,
-                  "zoom": -1.671458655748497
-                }
+                "file": "Agency/Templates/project.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "All Flows"
-            }
-          },
-          {
-            "id": "8558c60802e1a176",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "project"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,12 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Agency/Templates/project.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of project"
             }
           }
         ],
@@ -249,14 +236,16 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "8558c60802e1a176",
+  "active": "6b90488f3499a1b6",
   "lastOpenFiles": [
-    "Agency/All Flows.canvas",
-    "Agency/Legal/Forms.md",
-    "Agency/Legal/Team Manager T&C.pdf",
-    "Agency/Legal/msoB329.tmp",
+    "Agency/Templates/client.md",
     "Agency/Templates/project.md",
     "Agency/Templates/{Project Name}.md",
+    "Agency/Legal/Coreline_Agency_NDA.pdf",
+    "Agency/Legal/Forms.md",
+    "Agency/All Flows.canvas",
+    "Agency/Legal/Team Manager T&C.pdf",
+    "Agency/Legal/msoB329.tmp",
     "Agency/Templates/team-member.md",
     "Agency/Templates/contract.md",
     "Agency/Templates/deal.md",
@@ -273,7 +262,6 @@
     "Agency/Deals/Ghost Editor.md",
     "Dashboard/dashboard.js",
     "Dashboard/dashboard.html",
-    "Dashboard",
     "Agency/Dashboard/DashboardTemplate.md",
     "Agency/Dashboard/Index.md",
     "Agency/Dashboard/ComprehensiveIndex.md",
