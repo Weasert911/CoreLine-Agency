@@ -5,5 +5,5 @@
 - [ ] Meeting with the Editors
 - [ ] Building Analytics based on those data
 
-##### **Meeting Quetions:**
+##### **Meeting Question's:**
 ![[Coreline_Interview_Questions.pdf]]

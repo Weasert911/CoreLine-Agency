@@ -15,8 +15,8 @@
               "state": {
                 "file": "Agency/All Flows.canvas",
                 "viewState": {
-                  "x": 135.26479804985058,
-                  "y": 469.94268979503556,
+                  "x": -122.61423420821396,
+                  "y": 95.76527044019684,
                   "zoom": -0.33812532241516385
                 }
               },
@@ -83,8 +83,8 @@
             "state": {
               "type": "notebook-navigator",
               "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
+              "icon": "lucide-ghost",
+              "title": "notebook-navigator"
             }
           }
         ],
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5
+    "width": 212.5
   },
   "right": {
     "id": "60052d8c228c3569",
@@ -202,8 +202,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -224,7 +224,6 @@
       "bases:Create new base": false,
       "system3-relay:Relay": false,
       "obsidian-kanban:Create new board": false,
-      "notebook-navigator:Notebook Navigator": false,
       "templater-obsidian:Templater": false,
       "webpage-html-export:Export as HTML": false,
       "cannoli:Start/stop cannoli": false
@@ -232,9 +231,9 @@
   },
   "active": "2fa751383cfc139e",
   "lastOpenFiles": [
+    "Agency/All Flows.canvas",
     "Agency/Each Project Brief Automation.canvas",
     "Agency/Payment Structure.canvas",
-    "Agency/All Flows.canvas",
     "Agency/Today's TODO.md",
     "Agency/Untitled.md",
     "Agency/Untitled.canvas",
