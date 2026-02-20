@@ -11,17 +11,14 @@
             "id": "2fa751383cfc139e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Agency/All Flows.canvas",
-                "viewState": {
-                  "x": -122.61423420821396,
-                  "y": 95.76527044019684,
-                  "zoom": -0.33812532241516385
-                }
+                "file": "Agency/Team/Untitled.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "All Flows"
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
         ]
@@ -87,8 +84,7 @@
               "title": "notebook-navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -231,9 +227,14 @@
   },
   "active": "2fa751383cfc139e",
   "lastOpenFiles": [
-    "Agency/All Flows.canvas",
+    "Agency/Templates/client.md",
+    "Agency/Team/Untitled.md",
+    "Agency/Templates/contract.md",
+    "Agency/Templates/deal.md",
+    "Agency/Templates/{Project Name}.md",
     "Agency/Each Project Brief Automation.canvas",
     "Agency/Payment Structure.canvas",
+    "Agency/All Flows.canvas",
     "Agency/Today's TODO.md",
     "Agency/Untitled.md",
     "Agency/Untitled.canvas",
@@ -241,14 +242,10 @@
     "Untitled.md",
     "CIRA (Central Intelligence & Resource Assistant).md",
     "Agency/Templates/payout.md",
-    "Agency/Templates/contract.md",
-    "Agency/Templates/client.md",
-    "Agency/Templates/{Project Name}.md",
     "{{Editor Name}}.md",
     "Agency/SOP/Project Delivery Standards.md",
     "Agency/Templates/project.md",
     "Agency/Templates/invoice.md",
-    "Agency/Templates/deal.md",
     "Agency/Legal/Coreline_Agency_NDA.pdf",
     "Agency/Legal/Forms.md",
     "Agency/Legal/Team Manager T&C.pdf",
