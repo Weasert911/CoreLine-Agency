@@ -1,3 +1,7 @@
+---
+share_link: https://share.note.sx/tr1tlm9i#XHC65Joah7rvmasFaDMqaB/834PAeMRamrDAshwVtn8
+share_updated: 2026-02-21T17:43:20+05:30
+---
 
 ## Overview
 Standard scripts for outreach team to ensure consistent communication and effectiveness.

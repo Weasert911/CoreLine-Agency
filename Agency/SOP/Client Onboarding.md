@@ -1,3 +1,7 @@
+---
+share_link: https://share.note.sx/b48k2x2y#Mhfeo727SLaMstahod0kxG42wSXEcZq/2Uz8y8+7WwI
+share_updated: 2026-02-21T18:19:06+05:30
+---
 
 ## Overview
 A streamlined onboarding process ensures new clients are set up for success from day one.
