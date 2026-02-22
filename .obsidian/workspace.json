@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agency/Team/Untitled.md",
-                "mode": "source",
+                "file": "Agency/Dashboard/CIRA Dashboard.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "CIRA Dashboard"
             }
           }
         ]
@@ -75,16 +75,17 @@
             }
           },
           {
-            "id": "cc0b1239363fed3d",
+            "id": "506b1c1eba87eb18",
             "type": "leaf",
             "state": {
               "type": "notebook-navigator",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "notebook-navigator"
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -222,13 +223,16 @@
       "obsidian-kanban:Create new board": false,
       "templater-obsidian:Templater": false,
       "webpage-html-export:Export as HTML": false,
-      "cannoli:Start/stop cannoli": false
+      "cannoli:Start/stop cannoli": false,
+      "notebook-navigator:Notebook Navigator": false
     }
   },
   "active": "2fa751383cfc139e",
   "lastOpenFiles": [
-    "Agency/Templates/client.md",
+    "Agency/Dashboard/Agency Database.md",
+    "Agency/Dashboard/CIRA Dashboard.md",
     "Agency/Team/Untitled.md",
+    "Agency/Templates/client.md",
     "Agency/Templates/contract.md",
     "Agency/Templates/deal.md",
     "Agency/Templates/{Project Name}.md",
@@ -266,8 +270,6 @@
     "Agency/Dashboard/Index.md",
     "Agency/Dashboard/ComprehensiveIndex.md",
     "Agency/Dashboard/Agency Overview.md",
-    "Agency/Dashboard/Dashboard.md",
-    "copilot/copilot-conversations/I_want_you_to_act_as_an_Expert_Obsidian_System@20260219_112743.md",
     "logo (1).jpeg",
     "Untitled.canvas"
   ]
