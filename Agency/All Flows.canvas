@@ -1,13 +1,9 @@
 {
 	"nodes":[
 		{"id":"69444cd488535e9b","type":"group","x":-600,"y":-220,"width":1900,"height":2320,"color":"#ffffff","label":"Client Aquization to Delivery Of Work"},
-		{"id":"07da53f969a9d476","type":"group","x":-440,"y":-1660,"width":970,"height":740,"color":"#ffffff","label":"Hiearchy"},
-		{"id":"719b25f9719062a7","type":"text","text":"Editors, Web Dev. etc","x":-370,"y":-1320,"width":250,"height":60,"color":"3"},
-		{"id":"b11bd7b6d859a4a6","type":"text","text":"Weasert\n`Systems and Finances`\n","x":120,"y":-1600,"width":250,"height":80,"color":"5"},
-		{"id":"683ecb1648c14b91","type":"text","text":"Dev Quest\n`Website and Automation`","x":-200,"y":-1600,"width":250,"height":80,"color":"5"},
+		{"id":"07da53f969a9d476","type":"group","x":480,"y":-1240,"width":970,"height":820,"color":"#ffffff","label":"Hiearchy"},
 		{"id":"840519557f7d6213","type":"text","text":"🟦 For Admin's Actions\n🟧 For Outreacher's Actions\n🟪 For Client's Actions\n🟩 For Team Manager's Actions\n🟨 For Editor's Actions","x":-575,"y":-600,"width":280,"height":163},
 		{"id":"07c1c1f558d6b085","type":"text","text":"If the clients Ghost we exploit their email box or sms box with bombing","x":980,"y":-185,"width":250,"height":110,"color":"#002a61"},
-		{"id":"3397c25e781aa3f1","type":"text","text":"OutReachers","x":240,"y":-1080,"width":250,"height":60,"color":"2"},
 		{"id":"630acbbc476da209","type":"text","text":"If Client Is Convinced That The Video Is looking Perfect","x":995,"y":1795,"width":250,"height":76,"color":"6"},
 		{"id":"84a574b69090fb03","type":"text","text":"The Outreacher Will Send The Client Payment Form","x":600,"y":1803,"width":250,"height":60,"color":"2"},
 		{"id":"bbc82a8b871678b3","type":"text","text":"They Pay The UpFront Fee Or A Settlement Is Done","x":217,"y":622,"width":250,"height":60,"color":"6"},
@@ -31,8 +27,13 @@
 		{"id":"fc8321e2e6fb04f0","type":"text","text":"After That Their work Is Reviewed By Admins","x":60,"y":459,"width":250,"height":60,"color":"5"},
 		{"id":"d8e9b7d0e9011dc2","type":"text","text":"If It is not Suited For Agency rather of project Topic or Low Revenue. We  Refuse","x":-147,"y":619,"width":250,"height":101,"color":"5"},
 		{"id":"552b280864463f3b","type":"text","text":"They Deliver The Updates To Admins","x":-165,"y":1301,"width":250,"height":81,"color":"4"},
-		{"id":"cdf9d7ba68ecb5f5","type":"text","text":"Veer\n``","x":140,"y":-1450,"width":285,"height":100,"color":"4"},
-		{"id":"e423bd4fe243162c","type":"text","text":"Neo\n`Data Entry and Management`","x":-245,"y":-1440,"width":285,"height":80,"color":"4"}
+		{"id":"e423bd4fe243162c","type":"text","text":"Neo\n`Editor Management and Work Delivery`","x":580,"y":-825,"width":362,"height":90,"color":"4"},
+		{"id":"cdf9d7ba68ecb5f5","type":"text","text":"Veer\n`Outreachers Team`","x":1100,"y":-830,"width":285,"height":100,"color":"4"},
+		{"id":"3397c25e781aa3f1","type":"text","text":"OutReachers","x":1040,"y":-640,"width":250,"height":60,"color":"2"},
+		{"id":"683ecb1648c14b91","type":"text","text":"Dev Quest\n`Website and Automation`","x":720,"y":-1140,"width":250,"height":80,"color":"5"},
+		{"id":"b11bd7b6d859a4a6","type":"text","text":"Weasert\n`Systems and Finances`\n","x":1040,"y":-1140,"width":250,"height":80,"color":"5"},
+		{"id":"6d74c8d4833f5aa6","x":880,"y":-1000,"width":250,"height":60,"type":"text","text":"Admins"},
+		{"id":"719b25f9719062a7","type":"text","text":"Editors, Web Dev. etc","x":720,"y":-640,"width":250,"height":60,"color":"3"}
 	],
 	"edges":[
 		{"id":"065cf964a4fb02be","fromNode":"4a7fe64a7894b9e9","fromSide":"bottom","toNode":"02ae61e3ff58999f","toSide":"top"},
@@ -57,6 +58,14 @@
 		{"id":"c170320ea16974e5","fromNode":"b55d953a56507f67","fromSide":"bottom","toNode":"630acbbc476da209","toSide":"top"},
 		{"id":"acddcecd8a18b43e","fromNode":"630acbbc476da209","fromSide":"left","toNode":"84a574b69090fb03","toSide":"right"},
 		{"id":"8003a1bc855262b4","fromNode":"84a574b69090fb03","fromSide":"left","toNode":"6c10cc20f156a00d","toSide":"right"},
-		{"id":"17b77bce47aa99d2","fromNode":"6c10cc20f156a00d","fromSide":"left","toNode":"ea3583eddd5f82fb","toSide":"right"}
+		{"id":"17b77bce47aa99d2","fromNode":"6c10cc20f156a00d","fromSide":"left","toNode":"ea3583eddd5f82fb","toSide":"right"},
+		{"id":"a0cbcb0e46317974","fromNode":"cdf9d7ba68ecb5f5","fromSide":"bottom","toNode":"3397c25e781aa3f1","toSide":"top"},
+		{"id":"c89fa723d72e2036","fromNode":"683ecb1648c14b91","fromSide":"right","toNode":"b11bd7b6d859a4a6","toSide":"left"},
+		{"id":"6f846dd9cd93f7c1","fromNode":"b11bd7b6d859a4a6","fromSide":"left","toNode":"683ecb1648c14b91","toSide":"right"},
+		{"id":"b9f4b3f59a08fbb5","fromNode":"683ecb1648c14b91","fromSide":"bottom","toNode":"6d74c8d4833f5aa6","toSide":"top"},
+		{"id":"82123d762fb58f27","fromNode":"b11bd7b6d859a4a6","fromSide":"bottom","toNode":"6d74c8d4833f5aa6","toSide":"top"},
+		{"id":"d04290550227e0da","fromNode":"e423bd4fe243162c","fromSide":"top","toNode":"6d74c8d4833f5aa6","toSide":"bottom"},
+		{"id":"c6ba79fd0f2254b9","fromNode":"cdf9d7ba68ecb5f5","fromSide":"top","toNode":"6d74c8d4833f5aa6","toSide":"bottom"},
+		{"id":"b3a59d466a1d59b8","fromNode":"e423bd4fe243162c","fromSide":"bottom","toNode":"719b25f9719062a7","toSide":"top"}
 	]
 }
