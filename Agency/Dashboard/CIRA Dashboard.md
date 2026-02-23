@@ -4,7 +4,6 @@
 // =============================
 const filePath = "Agency Database.md";
 const content = await dv.io.load(filePath);
-const meta = dv.page(filePath);
 
 if (!content) {
     dv.paragraph("Database file could not be loaded.");
@@ -19,6 +18,7 @@ const lines = content.split("\n");
 function isValidDate(dateStr){
     return /^\d{4}-\d{2}-\d{2}$/.test(dateStr);
 }
+
 function parseDate(str){
     return new Date(str + "T00:00:00");
 }
@@ -48,25 +48,43 @@ for (let line of lines){
     if (line.includes("## Outreachers")) { mode="outreach"; continue; }
     if (line.includes("## Team Managers")) { mode="manager"; continue; }
 
-    // Clients
-    if (section==="clients" && line.startsWith("|") && !line.includes("Client Name") && !line.includes("---")){
+    // Clients (safe parsing)
+    if (
+        section==="clients" &&
+        line.startsWith("|") &&
+        !line.includes("Client Name") &&
+        !line.includes("---")
+    ){
         let p=line.split("|").map(x=>x.trim());
-        clients.push({
-            name:p[1],
-            manager:p[2],
-            active:p[3]==="Yes"
-        });
+
+        if (p[1] && p[1] !== "") {
+            clients.push({
+                name:p[1],
+                manager:p[2] || "",
+                active:p[3]==="Yes"
+            });
+        }
     }
 
     // Employees
-    if (section==="employees" && line.startsWith("|") && !line.includes("Name") && !line.includes("---")){
+    if (
+        section==="employees" &&
+        line.startsWith("|") &&
+        !line.includes("Name") &&
+        !line.includes("---")
+    ){
         let p=line.split("|").map(x=>x.trim());
-        if (mode==="outreach") outreachers.push(p[1]);
-        if (mode==="manager") managers.push(p[1]);
+        if (mode==="outreach" && p[1]) outreachers.push(p[1]);
+        if (mode==="manager" && p[1]) managers.push(p[1]);
     }
 
     // Revenue
-    if (section==="revenue" && line.startsWith("|") && !line.includes("Date") && !line.includes("---")){
+    if (
+        section==="revenue" &&
+        line.startsWith("|") &&
+        !line.includes("Date") &&
+        !line.includes("---")
+    ){
         let p=line.split("|").map(x=>x.trim());
         if (isValidDate(p[1])){
             revenue.push({
@@ -79,7 +97,12 @@ for (let line of lines){
     }
 
     // Expenses
-    if (section==="expenses" && line.startsWith("|") && !line.includes("Date") && !line.includes("---")){
+    if (
+        section==="expenses" &&
+        line.startsWith("|") &&
+        !line.includes("Date") &&
+        !line.includes("---")
+    ){
         let p=line.split("|").map(x=>x.trim());
         if (isValidDate(p[1])){
             expenses.push({
@@ -92,9 +115,12 @@ for (let line of lines){
 }
 
 // =============================
-// TIME REFERENCE
+// TIME REFERENCE (Safe)
 // =============================
-let latestDate = new Date(Math.max(...revenue.map(r=>r.date)));
+let latestDate = revenue.length > 0
+    ? new Date(Math.max(...revenue.map(r=>r.date)))
+    : new Date();
+
 let month = latestDate.getMonth();
 let year = latestDate.getFullYear();
 let lastMonth = month - 1;
@@ -134,22 +160,29 @@ for (let e of expenses){
         monthExpenses+=e.amount;
 }
 
-let growth= lastMonthRevenue>0
+let growth = lastMonthRevenue>0
     ? ((monthRevenue-lastMonthRevenue)/lastMonthRevenue)*100
-    :0;
+    : 0;
 
-let managerPool=monthRevenue*0.10;
-let totalCommissions=Object.values(commissions).reduce((a,b)=>a+b,0);
-let netProfit=monthRevenue-monthExpenses-managerPool-totalCommissions;
-let profitMargin=monthRevenue>0?(netProfit/monthRevenue)*100:0;
+let managerPool = monthRevenue * 0.10;
 
-let activeClients=clients.filter(c=>c.active);
-let inactiveClients=clients.filter(c=>!c.active);
+let totalCommissions = Object.values(commissions).length > 0
+    ? Object.values(commissions).reduce((a,b)=>a+b,0)
+    : 0;
+
+let netProfit = monthRevenue - monthExpenses - managerPool - totalCommissions;
+
+let profitMargin = monthRevenue>0
+    ? (netProfit/monthRevenue)*100
+    : 0;
+
+let activeClients = clients.filter(c=>c.active);
+let inactiveClients = clients.filter(c=>!c.active);
 
 // =============================
-// EXECUTIVE SUMMARY
+// EXECUTIVE DASHBOARD
 // =============================
-dv.header(1,"Coreline Agency – Executive Dashboard");
+dv.header(1,"Coreline Agency Executive Dashboard");
 
 dv.table(
 ["Metric","Value"],
@@ -161,16 +194,17 @@ dv.table(
 ["Revenue Growth (%)",growth.toFixed(2)],
 ["Current Month Expenses",monthExpenses],
 ["Outreach Commissions (10%)",totalCommissions],
-["Manager Revenue Allocation (10%)",managerPool],
+["Manager Allocation (10%)",managerPool],
 ["Net Profit",netProfit],
 ["Profit Margin (%)",profitMargin.toFixed(2)]
 ]
 );
 
 // =============================
-// PERFORMANCE REPORTS
+// OUTREACH PERFORMANCE
 // =============================
-dv.header(2,"Outreach Performance Summary");
+dv.header(2,"Outreach Performance");
+
 dv.table(
 ["Outreacher","Total Revenue","Current Month Commission"],
 Object.entries(revenueByOutreacher)
@@ -178,10 +212,15 @@ Object.entries(revenueByOutreacher)
 .map(([k,v])=>[k,v,commissions[k]||0])
 );
 
-dv.header(2,"Manager Revenue Allocation");
+// =============================
+// MANAGER REVENUE SUMMARY
+// =============================
+dv.header(2,"Manager Revenue Summary");
+
 dv.table(
 ["Manager","Total Revenue Managed"],
-Object.entries(revenueByManager).sort((a,b)=>b[1]-a[1])
+Object.entries(revenueByManager)
+.sort((a,b)=>b[1]-a[1])
 );
 ```
 

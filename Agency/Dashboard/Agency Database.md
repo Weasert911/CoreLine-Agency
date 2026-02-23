@@ -5,9 +5,9 @@ monthly_goal: 20000
 ---
 # 👥 Clients
 
-| Client Name | Manager | Active |
-| ----------- | ------- | ------ |
-|             |         |        |
+| Client Name          | Manager | Active |
+| -------------------- | ------- | ------ |
+| Revoeditzx - Discord | Veer    | Yes    |
 
 
 ---
@@ -16,9 +16,9 @@ monthly_goal: 20000
 
 ## Outreachers
 
-| Name | Role |
-| ---- | ---- |
-|      |      |
+| Name   | Role       |
+| ------ | ---------- |
+| Ritesh | Outreacher |
 
 
 ## Team Managers
@@ -34,9 +34,10 @@ monthly_goal: 20000
 
 ## 🔹 Current Month (February 2026)
 
-| Date | Client | Amount | Outreacher |
-| ---- | ------ | ------ | ---------- |
-|      |        |        |            |
+| Date       | Client     | Amount | Outreacher |
+| ---------- | ---------- | ------ | ---------- |
+| 2026-02-23 | revoeditzx | 7      | Ritesh     |
+
 
 
 
