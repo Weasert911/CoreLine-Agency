@@ -36,7 +36,7 @@ monthly_goal: 20000
 
 | Date       | Client     | Amount | Outreacher |
 | ---------- | ---------- | ------ | ---------- |
-| 2026-02-23 | revoeditzx | 7      | Ritesh     |
+| 2026-02-23 | revoeditzx | 17     | Ritesh     |
 
 
 
