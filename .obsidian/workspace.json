@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CIRA (Central Intelligence & Resource Assistant).md",
-                "mode": "source",
+                "file": "Agency/Dashboard Guidelines.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CIRA (Central Intelligence & Resource Assistant)"
+              "title": "Dashboard Guidelines"
             }
           }
         ],
@@ -239,14 +239,17 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "f304b06133a63648",
+  "active": "19f29ded1ca16bd1",
   "lastOpenFiles": [
-    "Agency/Legal",
-    "Agency/SOP",
-    "Agency/Templates",
+    "Agency/Agency Database.md",
     "Agency/Dashboard Guidelines.md",
-    "CIRA (Central Intelligence & Resource Assistant).md",
+    "Agency/CIRA Charts.md",
+    "Agency/CIRA Dashboard.md",
     "CoreLIne Agency.jpeg",
+    "CIRA (Central Intelligence & Resource Assistant).md",
+    "Agency/SOP",
+    "Agency/Legal",
+    "Agency/Templates",
     "Agency/Legal/Harsh",
     "Agency/Legal/Veer - Team Manager",
     "Agency/SOP/Docs",
@@ -254,7 +257,6 @@
     "Agency/Dashboard",
     "Agency/Deals",
     "Agency/Applicants",
-    "Agency/Leads",
     "Agency/Dashboard/Agency Database.md",
     "Agency/Dashboard/CIRA Dashboard.md",
     "Agency/Team/Untitled.md",
@@ -280,9 +282,6 @@
     "Agency/SOP/Outreacher Scripts.md",
     "Dashboard/dashboard.md",
     "Dashboard 1/dashboard.md",
-    "Agency/Deals/Ghost Editor.md",
-    "Agency/Dashboard/DashboardTemplate.md",
-    "Agency/Dashboard/Index.md",
     "logo (1).jpeg",
     "Untitled.canvas"
   ]

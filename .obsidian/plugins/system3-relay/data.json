@@ -2,20 +2,7 @@
   "release": {
     "channel": "stable"
   },
-  "sharedFolders": [
-    {
-      "path": "Agency",
-      "guid": "e015dd36-c7be-43fd-ba06-c1f437ace389",
-      "relay": "b7fed528-2d77-4814-aecf-8d641df282ab",
-      "sync": {
-        "images": true,
-        "audio": true,
-        "videos": true,
-        "pdfs": true,
-        "otherTypes": false
-      }
-    }
-  ],
+  "sharedFolders": [],
   "endpoints": {},
   "enableDocumentStatus": false,
   "enableNewLinkFormat": false,
