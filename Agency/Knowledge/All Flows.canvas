@@ -30,7 +30,7 @@
 		{"id":"683ecb1648c14b91","type":"text","text":"## Dev Quest\n*Web, Portfolio, Tech Infra*\n- `Website`\n- `Portfolio updates`\n- `Case studies`\n- `Funnels`\n- `Automation`\n- `Tech backend`","x":560,"y":-1200,"width":250,"height":280,"color":"5"},
 		{"id":"e423bd4fe243162c","type":"text","text":"##### Neo\n*Workers + Deadlines + Production*\n- `Editors`\n- `Designers`\n- `Freelancers`\n- `Task assignment`\n- `Deadlines`\n- `Internal quality check (technical level)`","x":1020,"y":-720,"width":362,"height":300,"color":"4"},
 		{"id":"b11bd7b6d859a4a6","type":"text","text":"### Weasert\n*Clients, Analytics, Growth, Finance*\n- `Client onboarding`\n- `Client calls`\n- `Strategy discussions`\n- `Pricing`\n- `Scope control`\n- `Upselling`\n- `Analytics reports`\n- `Final approval before delivery`\n- `Any sensitive client conversation`","x":560,"y":-870,"width":300,"height":410,"color":"5"},
-		{"id":"cdf9d7ba68ecb5f5","type":"text","text":"##### Veer\n*Records + Documentation + Legal Data*\n- `SOP documentation`\n- `Workflow improvement`\n- `Records creation`\n- `Records updates`\n- `Process improvement`\n- `Identifying bottlenecks`\n- `Freelancer performance tracking`","x":1032,"y":-1120,"width":339,"height":320,"color":"4"}
+		{"id":"cdf9d7ba68ecb5f5","type":"text","text":"##### Veer\n*Records + Documentation + Legal Data*\n- `SOP documentation`\n- `Workflow improvement`\n- `Records creation`\n- `Records updates`\n- `Process improvement`\n- `Identifying bottlenecks`\n- `Freelancer performance tracking`","x":1043,"y":-1120,"width":339,"height":320,"color":"4"}
 	],
 	"edges":[
 		{"id":"065cf964a4fb02be","fromNode":"4a7fe64a7894b9e9","fromSide":"bottom","toNode":"02ae61e3ff58999f","toSide":"top"},
