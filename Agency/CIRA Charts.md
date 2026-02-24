@@ -1,9 +1,8 @@
 # Coreline Agency – Charts Dashboard
 
 ```dataviewjs
-
 // =============================
-// LOAD CHART.JS (CDN SAFE LOADER)
+// LOAD CHART.JS
 // =============================
 if (!window.Chart) {
     const script = document.createElement("script");
@@ -42,7 +41,6 @@ function parseDate(str){
 let deals = [];
 let expenses = [];
 let leads = [];
-let team = [];
 
 let section = "";
 
@@ -54,40 +52,39 @@ for (let line of lines){
     if (line.includes("# ***DEALS***")) section="deals";
     if (line.includes("# ***EXPENSES***")) section="expenses";
     if (line.includes("# ***LEADS***")) section="leads";
-    if (line.includes("# ***TEAM***")) section="team";
 
     if (!line.startsWith("|") || line.includes("---")) continue;
 
-    let p = line.split("|").map(x=>x.trim());
+    let p = line.split("|").map(x=>x.trim()).filter(x=>x!== "");
 
-    if (section==="deals" && p[1] !== "Deal ID"){
+    // DEALS
+    if (section==="deals" && p[0] !== "Deal ID"){
+
         deals.push({
-            date:isValidDate(p[2]) ? parseDate(p[2]) : null,
-            outreacher:p[5],
-            manager:p[6],
-            amount:Number(p[10])||0,
-            paymentStatus:p[15],
-            dealStatus:p[16]
+            paymentDate:isValidDate(p[16]) ? parseDate(p[16]) : null,
+            outreacher:p[4],
+            manager:p[5],
+            amount:Number(p[9])||0,
+            editorCost:Number(p[10])||0,
+            otherCost:Number(p[11])||0,
+            discount:Number(p[12])||0,
+            tax:Number(p[13])||0,
+            paymentStatus:p[14],
+            dealStatus:p[15]
         });
     }
 
-    if (section==="expenses" && p[1] !== "Date"){
+    // EXPENSES
+    if (section==="expenses" && p[0] !== "Date"){
         expenses.push({
-            date:isValidDate(p[1]) ? parseDate(p[1]) : null,
-            amount:Number(p[5])||0
+            date:isValidDate(p[0]) ? parseDate(p[0]) : null,
+            amount:Number(p[4])||0
         });
     }
 
-    if (section==="leads" && p[1] !== "Lead ID"){
-        leads.push({ status:p[8] });
-    }
-
-    if (section==="team" && p[1] !== "Name"){
-        team.push({
-            name:p[1],
-            commission:Number(p[3])||0,
-            status:p[6]
-        });
+    // LEADS
+    if (section==="leads" && p[0] !== "Lead ID"){
+        leads.push({ status:p[7] });
     }
 }
 
@@ -105,46 +102,56 @@ let lastMonth = currentMonth - 1;
 let monthRevenue = 0;
 let lastMonthRevenue = 0;
 let monthExpenses = 0;
+
 let revenueByOutreacher = {};
 let revenueByManager = {};
-let commissions = {};
 
-let closedDeals = deals.filter(d=>d.dealStatus==="Closed");
+let outreacherCommissions = 0;
+let managerCommissions = 0;
 
-for (let d of closedDeals){
+// Only Paid + Closed deals
+let validDeals = deals.filter(d =>
+    d.dealStatus==="Closed" &&
+    d.paymentStatus==="Paid" &&
+    d.paymentDate
+);
 
-    if (!d.date) continue;
+for (let d of validDeals){
 
-    let m = d.date.getMonth();
-    let y = d.date.getFullYear();
+    let m = d.paymentDate.getMonth();
+    let y = d.paymentDate.getFullYear();
 
+    let profit = d.amount - d.editorCost - d.otherCost - d.discount - d.tax;
+
+    // Monthly Revenue
     if (m===currentMonth && y===currentYear)
         monthRevenue += d.amount;
 
     if (m===lastMonth && y===currentYear)
         lastMonthRevenue += d.amount;
 
+    // Revenue by Outreacher
     revenueByOutreacher[d.outreacher] =
         (revenueByOutreacher[d.outreacher]||0) + d.amount;
 
+    // Revenue by Manager (profit-based ownership)
     revenueByManager[d.manager] =
-        (revenueByManager[d.manager]||0) + d.amount;
+        (revenueByManager[d.manager]||0) + profit;
 
-    let member = team.find(t=>t.name===d.outreacher && t.status==="Active");
-    if (member){
-        commissions[d.outreacher] =
-            (commissions[d.outreacher]||0) +
-            (d.amount * (member.commission/100));
+    // Commissions
+    if (m===currentMonth && y===currentYear){
+        outreacherCommissions += d.amount * 0.10;
+        managerCommissions += profit * 0.10;
     }
 }
 
+// Expenses
 for (let e of expenses){
     if (e.date && e.date.getMonth()===currentMonth && e.date.getFullYear()===currentYear)
         monthExpenses += e.amount;
 }
 
-let totalCommissions = Object.values(commissions)
-.reduce((a,b)=>a+b,0);
+let totalCommissions = outreacherCommissions + managerCommissions;
 
 let netProfit = monthRevenue - monthExpenses - totalCommissions;
 
@@ -189,16 +196,16 @@ renderChart("bar",
     Object.values(revenueByOutreacher)
 );
 
-dv.header(2,"Manager Revenue Ownership");
+dv.header(2,"Manager Profit Ownership");
 renderChart("bar",
     Object.keys(revenueByManager),
     Object.values(revenueByManager)
 );
 
-dv.header(2,"Profit Breakdown");
+dv.header(2,"Profit Breakdown (Current Month)");
 renderChart("pie",
-    ["Revenue","Expenses","Commissions","Net Profit"],
-    [monthRevenue, monthExpenses, totalCommissions, netProfit]
+    ["Revenue","Expenses","Outreach Commissions","Manager Commissions","Net Profit"],
+    [monthRevenue, monthExpenses, outreacherCommissions, managerCommissions, netProfit]
 );
 
 dv.header(2,"Lead Pipeline");
@@ -206,5 +213,4 @@ renderChart("pie",
     ["Open Leads","Closed Leads"],
     [openLeads, closedLeads]
 );
-
 ```

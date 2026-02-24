@@ -1,7 +1,11 @@
 ```dataviewjs
-// =============================
-// LOAD DATABASE
-// =============================
+// =====================================================
+// ENTERPRISE AGENCY DASHBOARD (MONTHLY CORE ONLY)
+// =====================================================
+
+// =====================================================
+// LOAD DATABASE FILE
+// =====================================================
 const filePath = "Agency Database.md";
 const content = await dv.io.load(filePath);
 
@@ -12,9 +16,9 @@ if (!content) {
 
 const lines = content.split("\n");
 
-// =============================
+// =====================================================
 // HELPERS
-// =============================
+// =====================================================
 function isValidDate(dateStr){
     return /^\d{4}-\d{2}-\d{2}$/.test(dateStr);
 }
@@ -23,20 +27,19 @@ function parseDate(str){
     return new Date(str + "T00:00:00");
 }
 
-// =============================
+function safeLower(str){
+    return str ? str.trim().toLowerCase() : "";
+}
+
+// =====================================================
 // DATA STRUCTURES
-// =============================
-let clients = [];
-let leads = [];
-let deals = [];
-let expenses = [];
-let team = [];
+// =====================================================
+let clients=[], leads=[], deals=[], expenses=[], team=[];
+let section="";
 
-let section = "";
-
-// =============================
+// =====================================================
 // PARSE DATABASE
-// =============================
+// =====================================================
 for (let line of lines){
 
     if (line.includes("# ***CLIENTS***")) section="clients";
@@ -47,10 +50,9 @@ for (let line of lines){
 
     if (!line.startsWith("|") || line.includes("---")) continue;
 
-    let p = line.split("|").map(x=>x.trim());
+    let p=line.split("|").map(x=>x.trim());
 
-    // CLIENTS
-    if (section==="clients" && p[1] !== "ID"){
+    if (section==="clients" && p[1]!=="ID"){
         clients.push({
             id:p[1],
             name:p[2],
@@ -59,21 +61,19 @@ for (let line of lines){
         });
     }
 
-    // LEADS
-    if (section==="leads" && p[1] !== "Lead ID"){
+    if (section==="leads" && p[1]!=="Lead ID"){
         leads.push({
             id:p[1],
-            date:isValidDate(p[2]) ? parseDate(p[2]) : null,
+            date:isValidDate(p[2])?parseDate(p[2]):null,
             assigned:p[7],
             status:p[8]
         });
     }
 
-    // DEALS
-    if (section==="deals" && p[1] !== "Deal ID"){
+    if (section==="deals" && p[1]!=="Deal ID"){
         deals.push({
             id:p[1],
-            date:isValidDate(p[2]) ? parseDate(p[2]) : null,
+            date:isValidDate(p[2])?parseDate(p[2]):null,
             clientId:p[3],
             leadId:p[4],
             outreacher:p[5],
@@ -82,262 +82,318 @@ for (let line of lines){
             amount:Number(p[10])||0,
             editorCost:Number(p[11])||0,
             otherCost:Number(p[12])||0,
-            discount:Number(p[13])||0,
-            tax:Number(p[14])||0,
             paymentStatus:p[15],
             dealStatus:p[16]
         });
     }
 
-    // EXPENSES
-    if (section==="expenses" && p[1] !== "Date"){
+    if (section==="expenses" && p[1]!=="Date"){
         expenses.push({
-            date:isValidDate(p[1]) ? parseDate(p[1]) : null,
+            date:isValidDate(p[1])?parseDate(p[1]):null,
             amount:Number(p[5])||0,
             type:p[6]
         });
     }
 
-    // TEAM
-    if (section==="team" && p[1] !== "Name"){
+    if (section==="team" && p[1]!=="Name"){
         team.push({
             name:p[1],
             role:p[2],
             commission:Number(p[3])||0,
-            base:Number(p[4])||0,
             status:p[6]
         });
     }
 }
 
-// =============================
-// TIME REFERENCE
-// =============================
-let today = new Date();
-let currentMonth = today.getMonth();
-let currentYear = today.getFullYear();
-let lastMonth = currentMonth - 1;
+// =====================================================
+// TIME HANDLING
+// =====================================================
+let today=new Date();
+let currentMonth=today.getMonth();
+let currentYear=today.getFullYear();
 
-// =============================
-// CALCULATIONS
-// =============================
-let closedDeals = deals.filter(d=>d.dealStatus==="Closed");
-let paidDeals = deals.filter(d=>d.paymentStatus==="Paid");
+let lastMonth=currentMonth-1;
+let lastMonthYear=currentYear;
 
-let monthRevenue = 0;
-let lastMonthRevenue = 0;
-let totalRevenue = 0;
+if(lastMonth<0){
+    lastMonth=11;
+    lastMonthYear=currentYear-1;
+}
 
-let totalEditorCost = 0;
-let totalOtherCost = 0;
+// =====================================================
+// CLOSED DEALS
+// =====================================================
+let closedDeals = deals.filter(d =>
+    safeLower(d.dealStatus) === "closed"
+);
 
-let revenueByOutreacher = {};
-let revenueByManager = {};
-let commissions = {};
+// =====================================================
+// MONTHLY FINANCIALS
+// =====================================================
+let monthRevenue=0,lastMonthRevenue=0;
+let monthEditorCost=0,monthOtherCost=0;
+let totalRevenue=0;
 
-for (let d of closedDeals){
+let revenueByClient={};
+let revenueByManager={};
+let commissions={};
 
-    if (!d.date) continue;
+for(let d of closedDeals){
 
-    let m = d.date.getMonth();
-    let y = d.date.getFullYear();
+    if(!d.date) continue;
 
-    totalRevenue += d.amount;
-    totalEditorCost += d.editorCost;
-    totalOtherCost += d.otherCost;
+    let m=d.date.getMonth();
+    let y=d.date.getFullYear();
 
-    if (m===currentMonth && y===currentYear)
-        monthRevenue += d.amount;
+    totalRevenue+=d.amount;
 
-    if (m===lastMonth && y===currentYear)
-        lastMonthRevenue += d.amount;
+    revenueByClient[d.clientId]=(revenueByClient[d.clientId]||0)+d.amount;
+    revenueByManager[d.manager]=(revenueByManager[d.manager]||0)+d.amount;
 
-    revenueByOutreacher[d.outreacher] = 
-        (revenueByOutreacher[d.outreacher]||0) + d.amount;
+    let member=team.find(t=>t.name===d.outreacher && safeLower(t.status)==="active");
+    if(member){
+        commissions[d.outreacher]=(commissions[d.outreacher]||0)
+        + (d.amount*(member.commission/100));
+    }
 
-    revenueByManager[d.manager] = 
-        (revenueByManager[d.manager]||0) + d.amount;
+    if(m===currentMonth && y===currentYear){
+        monthRevenue+=d.amount;
+        monthEditorCost+=d.editorCost;
+        monthOtherCost+=d.otherCost;
+    }
 
-    let member = team.find(t=>t.name===d.outreacher && t.status==="Active");
-    if (member){
-        commissions[d.outreacher] = 
-            (commissions[d.outreacher]||0) + 
-            (d.amount * (member.commission/100));
+    if(m===lastMonth && y===lastMonthYear){
+        lastMonthRevenue+=d.amount;
     }
 }
 
-// Expenses (Current Month)
-let monthExpenses = expenses
+// =====================================================
+// EXPENSES
+// =====================================================
+let monthExpenses=expenses
 .filter(e=>e.date && e.date.getMonth()===currentMonth && e.date.getFullYear()===currentYear)
 .reduce((a,b)=>a+b.amount,0);
 
-// Growth
-let growth = lastMonthRevenue>0
-    ? ((monthRevenue-lastMonthRevenue)/lastMonthRevenue)*100
-    : 0;
+let totalCommissions=Object.values(commissions).reduce((a,b)=>a+b,0);
 
-// Profit
-let totalCommissions = Object.values(commissions)
-.reduce((a,b)=>a+b,0);
+// =====================================================
+// PROFIT STRUCTURE
+// =====================================================
+let grossProfit=monthRevenue-monthEditorCost-monthOtherCost;
+let netProfit=grossProfit-monthExpenses-totalCommissions;
+let profitMargin=monthRevenue>0?(netProfit/monthRevenue)*100:0;
+let growth=lastMonthRevenue>0?((monthRevenue-lastMonthRevenue)/lastMonthRevenue)*100:0;
 
-let netProfit = monthRevenue 
-    - monthExpenses 
-    - totalCommissions;
+// =====================================================
+// CLIENT + LEAD METRICS
+// =====================================================
+let activeClients=clients.filter(c=>safeLower(c.status)==="active").length;
+let totalClients=clients.length;
+let openLeads=leads.filter(l=>safeLower(l.status)==="open").length;
 
-let profitMargin = monthRevenue>0
-    ? (netProfit/monthRevenue)*100
-    : 0;
+// =====================================================
+// RISK METRICS
+// =====================================================
+let sortedClients=Object.entries(revenueByClient).sort((a,b)=>b[1]-a[1]);
+let top3Revenue=sortedClients.slice(0,3).reduce((a,b)=>a+b[1],0);
+let top3Risk=totalRevenue>0?(top3Revenue/totalRevenue)*100:0;
 
-// Client Metrics
-let activeClients = clients.filter(c=>c.status==="Active").length;
-let totalClients = clients.length;
+let unpaidExposure=closedDeals
+.filter(d=>safeLower(d.paymentStatus)!=="paid")
+.reduce((a,b)=>a+b.amount,0);
 
-// Lead Metrics
-let openLeads = leads.filter(l=>l.status==="Open").length;
-let closedLeads = leads.filter(l=>l.status==="Closed").length;
+let unpaidPercent=totalRevenue>0?(unpaidExposure/totalRevenue)*100:0;
 
-// =============================
-// EXECUTIVE SUMMARY
-// =============================
-dv.header(1,"Coreline Agency Executive Dashboard");
+// =====================================================
+// OPERATIONAL METRICS
+// =====================================================
+let operationalLeverage=
+(monthExpenses+monthEditorCost)>0
+? monthRevenue/(monthExpenses+monthEditorCost)
+:0;
+
+let activeTeam=team.filter(t=>safeLower(t.status)==="active").length;
+let revenuePerEmployee=activeTeam>0?monthRevenue/activeTeam:0;
+
+// =====================================================
+// 12-MONTH TREND
+// =====================================================
+let monthlyRevenueMap={};
+
+for(let d of closedDeals){
+    if(!d.date) continue;
+    let key=d.date.getFullYear()+"-"+String(d.date.getMonth()+1).padStart(2,"0");
+    monthlyRevenueMap[key]=(monthlyRevenueMap[key]||0)+d.amount;
+}
+
+// =====================================================
+// DASHBOARD OUTPUT
+// =====================================================
+dv.header(1,"Enterprise Agency Dashboard");
 
 dv.table(
 ["Metric","Value"],
 [
-["Total Clients", totalClients],
-["Active Clients", activeClients],
-["Open Leads", openLeads],
-["Closed Leads", closedLeads],
-["Total Closed Deals", closedDeals.length],
-["Current Month Revenue", monthRevenue],
-["Previous Month Revenue", lastMonthRevenue],
-["Revenue Growth (%)", growth.toFixed(2)],
-["Current Month Expenses", monthExpenses],
-["Total Commissions", totalCommissions],
-["Net Profit (Current Month)", netProfit],
-["Profit Margin (%)", profitMargin.toFixed(2)]
+["Total Clients",totalClients],
+["Active Clients",activeClients],
+["Open Leads",openLeads],
+["Current Month Revenue",monthRevenue],
+["Revenue Growth (%)",growth.toFixed(2)],
+["Gross Profit",grossProfit],
+["Net Profit",netProfit],
+["Profit Margin (%)",profitMargin.toFixed(2)]
 ]
 );
 
-// =============================
-// OUTREACH PERFORMANCE
-// =============================
-dv.header(2,"Outreach Performance");
+dv.header(2,"Risk & Stability Metrics");
 
 dv.table(
-["Outreacher","Total Revenue","Commission Earned"],
-Object.entries(revenueByOutreacher)
-.sort((a,b)=>b[1]-a[1])
-.map(([k,v])=>[k,v,commissions[k]||0])
+["Metric","Value"],
+[
+["Top 3 Client Concentration (%)",top3Risk.toFixed(2)],
+["Unpaid Revenue Exposure (%)",unpaidPercent.toFixed(2)],
+["Operational Leverage Ratio",operationalLeverage.toFixed(2)],
+["Revenue Per Employee",revenuePerEmployee.toFixed(2)]
+]
 );
 
-// =============================
-// MANAGER PERFORMANCE
-// =============================
 dv.header(2,"Manager Revenue Ownership");
 
 dv.table(
-["Manager","Total Revenue Managed"],
-Object.entries(revenueByManager)
-.sort((a,b)=>b[1]-a[1])
+["Manager","Revenue Managed"],
+Object.entries(revenueByManager).sort((a,b)=>b[1]-a[1])
 );
-// =============================
-// ADVANCED AGENCY ANALYTICS
-// =============================
 
-// Gross Profit (Revenue - Direct Costs)
-let grossProfit = monthRevenue - totalEditorCost - totalOtherCost;
+dv.header(2,"12-Month Revenue Trend");
 
-// Gross Margin
-let grossMargin = monthRevenue > 0
-    ? (grossProfit / monthRevenue) * 100
-    : 0;
+dv.table(
+["Month","Revenue"],
+Object.entries(monthlyRevenueMap).sort().slice(-12)
+);
+```
+```dataviewjs
+// ===============================
+// WEEKLY PAYOUT DASHBOARD
+// ===============================
 
-// Average Revenue Per Deal
-let avgRevenuePerDeal = closedDeals.length > 0
-    ? totalRevenue / closedDeals.length
-    : 0;
+let content = await dv.io.load("Agency Database.md");
 
-// Revenue Per Active Client
-let revenuePerClient = activeClients > 0
-    ? totalRevenue / activeClients
-    : 0;
+// Current week
+const WEEK_START = moment().startOf("week");
+const WEEK_END = moment().endOf("week");
 
-// Lead to Deal Conversion Rate
-let conversionRate = leads.length > 0
-    ? (closedDeals.length / leads.length) * 100
-    : 0;
-
-// Customer Acquisition Cost Proxy
-// (Using outreach commissions as acquisition cost model)
-let acquisitionCost = totalCommissions;
-
-// Revenue Concentration Risk
-let topClientRevenue = 0;
-let revenueByClient = {};
-
-for (let d of closedDeals){
-    revenueByClient[d.clientId] =
-        (revenueByClient[d.clientId]||0) + d.amount;
+// Extract DEALS section
+let dealsSection = content.split("# ***DEALS***")[1];
+if (!dealsSection) {
+    dv.paragraph("No DEALS section found.");
+    return;
 }
 
-topClientRevenue = Math.max(...Object.values(revenueByClient), 0);
+let tableText = dealsSection.split("# ***EXPENSES***")[0];
 
-let concentrationRisk = totalRevenue > 0
-    ? (topClientRevenue / totalRevenue) * 100
-    : 0;
+let rows = tableText.split("\n")
+    .filter(r => r.trim().startsWith("| D"));
 
-// Outreacher Efficiency (Revenue per Commission Paid)
-let outreachEfficiency = totalCommissions > 0
-    ? totalRevenue / totalCommissions
-    : 0;
+let outreacherRevenue = {};
+let managerProfit = {};
+let totalRevenue = 0;
+let totalProfit = 0;
 
-// Manager Portfolio Size
-let managerClientCount = {};
-for (let c of clients){
-    if (c.status === "Active"){
-        managerClientCount[c.manager] =
-            (managerClientCount[c.manager]||0) + 1;
+for (let row of rows) {
+
+    let cols = row.split("|").map(c => c.trim()).filter(c => c !== "");
+
+    let dealStatus = cols[15];
+    let paymentStatus = cols[14];
+    let paymentDate = cols[16];
+
+    if (
+        dealStatus === "Closed" &&
+        paymentStatus === "Paid" &&
+        moment(paymentDate).isBetween(WEEK_START, WEEK_END, null, '[]')
+    ) {
+
+        let outreacher = cols[4];
+        let manager = cols[5];
+
+        let amount = Number(cols[9]) || 0;
+        let editorCost = Number(cols[10]) || 0;
+        let otherCost = Number(cols[11]) || 0;
+        let discount = Number(cols[12]) || 0;
+        let tax = Number(cols[13]) || 0;
+
+        let profit = amount - editorCost - otherCost - discount - tax;
+
+        totalRevenue += amount;
+        totalProfit += profit;
+
+        if (!outreacherRevenue[outreacher])
+            outreacherRevenue[outreacher] = 0;
+
+        if (!managerProfit[manager])
+            managerProfit[manager] = 0;
+
+        outreacherRevenue[outreacher] += amount;
+        managerProfit[manager] += profit;
     }
 }
 
-// Burn Rate (Monthly Operating Cost)
-let burnRate = monthExpenses + totalCommissions;
+// DISPLAY
 
-// Runway (if no new revenue)
-let runway = burnRate > 0
-    ? netProfit / burnRate
-    : 0;
+dv.header(2, "Weekly Period");
+dv.paragraph(`${WEEK_START.format("YYYY-MM-DD")} → ${WEEK_END.format("YYYY-MM-DD")}`);
 
-// =============================
-// ADVANCED METRICS TABLE
-// =============================
-dv.header(2,"Financial Performance Analytics");
+dv.header(2, "Outreacher Payout (10% Revenue)");
 
-dv.table(
-["Metric","Value"],
-[
-["Gross Profit (Current Month)", grossProfit],
-["Gross Margin (%)", grossMargin.toFixed(2)],
-["Average Revenue Per Deal", avgRevenuePerDeal],
-["Revenue Per Active Client", revenuePerClient],
-["Lead to Deal Conversion (%)", conversionRate.toFixed(2)],
-["Top Client Revenue Concentration (%)", concentrationRisk.toFixed(2)],
-["Outreacher Efficiency Ratio", outreachEfficiency.toFixed(2)],
-["Monthly Burn Rate", burnRate],
-["Runway (Months Estimate)", runway.toFixed(2)]
-]
-);
+let outreachTable = [];
 
-// =============================
-// MANAGER PORTFOLIO DISTRIBUTION
-// =============================
-dv.header(2,"Manager Portfolio Distribution");
+for (let name in outreacherRevenue) {
+    let revenue = outreacherRevenue[name];
+    outreachTable.push([
+        name,
+        `$${revenue.toFixed(2)}`,
+        `$${(revenue * 0.10).toFixed(2)}`
+    ]);
+}
 
-dv.table(
-["Manager","Active Clients Managed"],
-Object.entries(managerClientCount)
-.sort((a,b)=>b[1]-a[1])
-);
+if (outreachTable.length === 0) {
+    dv.paragraph("No payouts this week.");
+} else {
+    dv.table(
+        ["Outreacher", "Revenue ($)", "Payout 10% ($)"],
+        outreachTable
+    );
+}
+
+dv.header(2, "Manager Payout (10% Profit)");
+
+let managerTable = [];
+
+for (let name in managerProfit) {
+    let profit = managerProfit[name];
+    managerTable.push([
+        name,
+        `$${profit.toFixed(2)}`,
+        `$${(profit * 0.10).toFixed(2)}`
+    ]);
+}
+
+if (managerTable.length === 0) {
+    dv.paragraph("No payouts this week.");
+} else {
+    dv.table(
+        ["Manager", "Profit ($)", "Payout 10% ($)"],
+        managerTable
+    );
+}
+
+dv.header(2, "Weekly Summary");
+
+dv.paragraph(`
+Total Revenue: $${totalRevenue.toFixed(2)}  
+Total Profit: $${totalProfit.toFixed(2)}  
+Total Outreacher Payout: $${(totalRevenue * 0.10).toFixed(2)}  
+Total Manager Payout: $${(totalProfit * 0.10).toFixed(2)}
+`);
 ```
 
