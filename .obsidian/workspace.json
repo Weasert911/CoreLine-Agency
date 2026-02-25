@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agency/Dashboard Guidelines.md",
+                "file": "Agency/CIRA Charts.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard Guidelines"
+              "title": "CIRA Charts"
             }
           }
         ],
@@ -239,12 +239,13 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "19f29ded1ca16bd1",
+  "active": "f304b06133a63648",
   "lastOpenFiles": [
+    "Agency/CIRA Charts.md",
+    "Untitled.md",
+    "Agency/CIRA Dashboard.md",
     "Agency/Agency Database.md",
     "Agency/Dashboard Guidelines.md",
-    "Agency/CIRA Charts.md",
-    "Agency/CIRA Dashboard.md",
     "CoreLIne Agency.jpeg",
     "CIRA (Central Intelligence & Resource Assistant).md",
     "Agency/SOP",
@@ -271,7 +272,6 @@
     "Agency/Untitled.md",
     "Agency/Untitled.canvas",
     "logo.jpeg",
-    "Untitled.md",
     "Agency/Templates/payout.md",
     "{{Editor Name}}.md",
     "Agency/SOP/Project Delivery Standards.md",
