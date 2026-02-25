@@ -17,10 +17,10 @@
 
 # _**LEADS**_
 
-|Lead ID|Date|Name|Platform|Service Interested|Estimated Value|Assigned To|Status|
-|---|---|---|---|---|---|---|---|
-|L1|2026-02-23|revoeditzx|Discord|Editing|17|Ritesh|Closed|
-|L2|2026-02-23|KJ-29|Reddit|Editing|0|Ritesh|Lost|
+| Lead ID | Date       | Name       | Platform | Service Interested | Estimated Value | Assigned To | Status |
+| ------- | ---------- | ---------- | -------- | ------------------ | --------------- | ----------- | ------ |
+| L1      | 2026-02-23 | revoeditzx | Discord  | Editing            | 17              | Ritesh      | Closed |
+| L2      | 2026-02-23 | KJ-29      | Reddit   | Editing            | 0               | Ritesh      | Lost   |
 
 **Status:**
 - Open
@@ -30,9 +30,10 @@
 ---
 # _**DEALS**_
 
-|Deal ID|Date|Client ID|Lead ID|Outreacher|Manager|Editor|Service Type|Quantity|Amount|Editor Cost|Other Cost|Discount|Tax|Payment Status|Deal Status|Payment Date|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|D1|2026-02-23|C1|L1|Ritesh|Manab|Cypher|Editing|1|17|10|0|0|0|Paid|Closed|2026-02-23|
+| Deal ID | Date       | Client ID | Lead ID | Outreacher | Manager | Editor | Service Type | Quantity | Amount | Editor Cost | Other Cost | Discount | Tax | Payment Status | Deal Status | Payment Date |
+| ------- | ---------- | --------- | ------- | ---------- | ------- | ------ | ------------ | -------- | ------ | ----------- | ---------- | -------- | --- | -------------- | ----------- | ------------ |
+| D1      | 2026-02-23 | C1        | L1      | Ritesh     | Manab   | Cypher | Editing      | 1        | 17     | 10          | 0          | 0        | 0   | Paid           | Closed      | 2026-02-23   |
+|         |            |           |         |            |         |        |              |          |        |             |            |          |     |                |             |              |
 
 **Deal Status:**
 - Open
@@ -60,12 +61,12 @@
 
 # _**TEAM**_
 
-|Name|Role|Commission %|Base Salary|Join Date|Status|
-|---|---|---|---|---|---|
-|Ritesh|Growth and Sales Admin|25|0|2026-01-17|Active|
-|Priyansh|Technical Admin|25|0|2026-01-17|Active|
-|Manab|Worker's Manager|10|0|2026-02-21|Active|
-|Veer|Records & Process Manager|10|0|2026-02-21|Active|
+| Name     | Role                      | Commission % | Base Salary | Join Date  | Status |
+| -------- | ------------------------- | ------------ | ----------- | ---------- | ------ |
+| Ritesh   | Growth and Sales Admin    | 25           | 0           | 2026-01-17 | Active |
+| Priyansh | Technical Admin           | 25           | 0           | 2026-01-17 | Active |
+| Manab    | Worker's Manager          | 10           | 0           | 2026-02-21 | Active |
+| Veer     | Records & Process Manager | 10           | 0           | 2026-02-21 | Active |
 
 **Status:**
 - Active
